@@ -73,11 +73,11 @@ public class SphericalFPSController : MonoBehaviour {
             if (grounded)
             {
 
-                if (Input.GetKey(KeyCode.LeftShift))
+                if (Input.GetKeyDown(KeyCode.LeftShift))
                 {                                 // if the player has pressed the sprint key
                     moveSpeed = sprintSpeed;                                            // sets the move speed to the sprint speed
                 }
-                else
+                if(Input.GetKeyUp(KeyCode.LeftShift))
                 {                                                                // if the key is up
                     moveSpeed = walkSpeed;                                              // the move speed is the regular walk speed
                 }
